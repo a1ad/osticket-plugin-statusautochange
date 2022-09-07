@@ -47,8 +47,9 @@ class StatusAutoChangePlugin extends Plugin {
             return;
         }
         // change status based on config
+        $original_status = TicketStatus::lookup($this->getConfig()->get('originalTicketStatus'));
         $new_status = TicketStatus::lookup($this->getConfig()->get('clientReplyStatus'));
-        if (!is_null($new_status) && $ticket->getStatusId() != $new_status->getId()) {
+        if (!is_null($new_status) && $ticket->getStatusId() == $original_status->getId()) {
             $ticket->setStatus($new_status);
         }
     }

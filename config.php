@@ -25,6 +25,11 @@ class StatusAutoChangePluginConfig extends PluginConfig {
 		}
 
         return array(
+            'originalTicketStatus' => new ChoiceField(array(
+                'default' => $default,
+                'label' => 'Only change status when original status is..',
+                'choices' => $statuses
+            )),
             'clientReplyStatus' => new ChoiceField(array(
                 'default' => $default,
                 'label' => 'When a client replies, status becomes',
