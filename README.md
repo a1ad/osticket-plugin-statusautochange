@@ -8,7 +8,10 @@ Ticket Status Auto-changer is a plugin for osTicket that allows you to automatic
 4. Click **Install** next to "Ticket Status Auto-changer."
 
 ## Configuration
-This plugin has only one setting: the status which you'd like a ticket to become when a client replies. You can choose any status that is an "open" or "closed" state.
+This plugin has only two settings: the "TO" status which you'd like a ticket to become when a client 
+replies and the "FROM" status. The previous status the ticket needs to be in before the ticket change to 
+the new status. 
+You can choose any status that is an "open" or "closed" state.
 
 Once you've added a status, save your changes, then enable the plugin.
 
